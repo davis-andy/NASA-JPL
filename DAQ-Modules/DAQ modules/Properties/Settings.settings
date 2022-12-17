@@ -1,0 +1,39 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="DAQ_modules.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AppDataPath" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\b230-cdot2-svm3\metsrv\356F Software\DAQ Modules - Andy\Release\AppData</Value>
+    </Setting>
+    <Setting Name="CalibrationReports" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\b230-cdot2-svm3\metsrv\356F Calibration Reports\_Electrical Cal Reports\Temperature\Module Temp Cards</Value>
+    </Setting>
+    <Setting Name="fluke_reading_url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://smart.jpl.nasa.gov/Metrology/EMS/api/current_fluke_reading/</Value>
+    </Setting>
+    <Setting Name="cal_due_dates_url" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">https://smart.jpl.nasa.gov/api/IndySoft/cal_due_dates/</Value>
+    </Setting>
+    <Setting Name="site_id" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">25</Value>
+    </Setting>
+    <Setting Name="username" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"></Value>
+    </Setting>
+    <Setting Name="password" Type="System.String" Scope="Application">
+      <Value Profile="(Default)"></Value>
+    </Setting>
+    <Setting Name="fluke_id" Type="System.String" Scope="User">
+      <Value Profile="(Default)">IS033301</Value>
+    </Setting>
+    <Setting Name="d34970_id" Type="System.String" Scope="User">
+      <Value Profile="(Default)">002334</Value>
+    </Setting>
+    <Setting Name="daq970_id" Type="System.String" Scope="User">
+      <Value Profile="(Default)">1646762</Value>
+    </Setting>
+    <Setting Name="d34980_id" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2245592</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
