@@ -51,7 +51,8 @@ If you are able to proceed, you are then presented to the Setup Page (not the sa
 ![Setup Page](imgs/setup_daq.PNG)
 <br><br>
 
-If you are able to proceed, you are then presented to the Setup Page (not the same as the Tutorial/Setup).  This one allows you to put in the relevent information for the Datasheet - UUT ID, UUT Model, UUT Serial, Temperature, Humidity - as well as options to communicate to the UUT with the correct settings. <br><br>
+Finally, we get to the Tests Page.  Run All Tests allows you to run run all the tests listed on the page at once, with the Stop Tests allows you to stop the tests at any point.  The individual test buttons allow you to go to those tests to change parameters and/or retest just that one for any reason. <br>
+Once the tests are complete, the buttons at the bottom finish up the Datasheet and saves it to the proper location on the server.  It then brings you back to the Setup Page in prep for another UUT. <br><br>
 ![Tests Page](imgs/tests_daq.PNG)
 <br><br>
 
