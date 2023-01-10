@@ -1,0 +1,62 @@
+<!-- Base Extension -->
+{% extends 'globals/base.html' %}
+
+
+<!-- Top right options -->
+{% block logged_in %}
+    <li class="nav-item">
+        <a class="nav-link px-md-3" href="../globals/switch_software.html" title="Switch Software">Switch Software</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link px-md-3" href="../globals/main.html" title="Logout">Logout</a>
+    </li>
+{% endblock %}
+
+
+<!-- App Label -->
+{% block software_label %}
+    MUX Cards
+{% endblock %}
+
+
+<!-- Navbar options -->
+{% block app_navbar %}
+<ul>
+    <li><a href="../daq/index.html" title="MUX Cards"><span class="fas fa-home-lg-alt"></span></a></li>
+    <li><a href="#">Settings</a>
+        <ul>
+            <li><a href="../daq/preferences.html">Preferences</a></li>
+            <li><a href="../daq/uut_specs.html" title="UUT Specifications">UUT Specifications</a></li>
+            <li><a href="../daq/std_specs.html" title="Standard Specifications">STD Specifications</a></li>
+            <li><a href="#" title="Calibration Reports" onclick="eel.daq_open_report_path()();">Cal Reports</a></li>
+        </ul>
+    </li>
+<!--    <li><a href="#">Calibration</a>-->
+<!--        <ul>-->
+<!--            <li><a href="../daq/instruments.html" title="New Calibration">New Cal</a></li>-->
+<!--            <li><a href="#" class="disabled">Resume Cal</a></li>-->
+<!--            <li><a href="#" class="disabled">Save Cal</a></li>-->
+<!--            <li><a href="#" class="disabled">Save Cal As</a></li>-->
+<!--        </ul>-->
+<!--    </li>-->
+    <li><a href="https://wiki.jpl.nasa.gov/pages/viewpage.action?spaceKey=wired&title=Noise+Source+Calibration+Software+%28VT-1000%29+Documentation"
+           target="_blank" class="disabled">Help</a></li>
+</ul>
+{% endblock %}
+
+
+<!-- Footer -->
+{% block footer %}
+    Release Date: <span id="daq-release"></span>
+    <br />
+    Software Version: <span id="daq-version"></span>, Procedure Number: <span id="daq-proc"></span>
+    <br />
+    Frontend Dev: <span id="daq-frontend"></span>,  Backend Dev: <span id="daq-backend"></span>
+{% endblock %}
+
+
+<!-- App JS Files -->
+{% block app_js_include %}
+    <script src="../../js/daq/Daq_Footer.js"></script>
+    <script src="../../js/daq/Daq_Variables.js"></script>
+{% endblock %}

@@ -1,0 +1,65 @@
+<!-- Base Extension -->
+{% extends 'daq/daq_base.html' %}
+
+
+<!-- Page Label -->
+{% block page_label %}
+    Standard Specifications
+{% endblock %}
+
+
+<!-- Main Content -->
+{% block page_content %}
+<!-- Select Standard dropdown -->
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col text-center">
+        <h5><label for="daq-std-model-dropdown">Select Standard Manufacturer - Model:</label></h5>
+    </div>
+    <div class="col"></div>
+</div>
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col text-center">
+        <select class="form-dropdown text-center" id="daq-std-model-dropdown" style="width: 50%; text-align-last: center">
+            <option value="0" hidden disabled>--------</option>
+            <option value="Ectron1140A" selected>Ectron 1140A</option>
+        </select>
+    </div>
+    <div class="col"></div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<!-- Ectron Specs -->
+<div id="daq-ectron-1140-specs">
+    {% include 'instruments/ectron_1140a_specs.html' %}
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<!-- Cancel and Save buttons -->
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col">
+        <div class="form-footer">
+            <div class="form-buttons">
+                <button class="form-btn-exit" type="button" id="daq-std-specs-cancel">Cancel</button>
+                <button class="form-btn-submit primary-bg" type="button" onclick="daq_save_std_specs()">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-2 text-center"></div>
+</div>
+{% endblock %}
+
+
+<!-- Page JS Files -->
+{% block page_js_include %}
+    <script src="../../js/daq/Daq_STD_Specs.js"></script>
+    <script src="../../js/instruments/Ectron_1140A_Specs.js"></script>
+{% endblock %}

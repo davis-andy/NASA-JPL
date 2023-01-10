@@ -1,0 +1,375 @@
+<!-- Base Extension -->
+{% extends 'daq/daq_base.html' %}
+
+
+<!-- Page Label -->
+{% block page_label %}
+    Setup
+{% endblock %}
+
+
+<!-- Main Content -->
+{% block page_content %}
+<!-- Modal to notify about UUT ID not entered -->
+<div class="modal fade" id="daq-setup-modal" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">UUT ID not entered</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body text-center">
+                UUT ID has not been entered. <br/>
+                Please enter an ID to continue.
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="form-btn-submit primary-bg" data-dismiss="modal" id="daq-setup-modal-btn">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- UUT Info Section Header -->
+<div class="row align-items-center">
+    <div class="label-container">
+        <div class="left-border"></div>
+        <div class="top-border"><h4>UUT Information</h4></div>
+        <div class="bottom-border"></div>
+    </div>
+</div>
+
+<br/>
+
+<div class="row align-items-center" style="width: 100%; margin-left: 3%; margin-top: 10px;">
+    <!-- UUT ID Input -->
+    <label class="col-form-label form-input-label"  for="daq-uut-id">UUT ID</label>
+    <div class="col">
+        <input class="form-input-field text-center" id="daq-uut-id" type="text" oninput="this.value = this.value.toUpperCase()"
+               placeholder="e.g. IS021388">
+    </div>
+
+    <!-- UUT Model Dropdown -->
+    <label class="col-form-label form-input-label" for="daq-uut-model">UUT Model</label>
+    <div class="col">
+        <select class="form-dropdown text-center" id="daq-uut-model" style="width: 70%">
+            <option value="none" disabled selected hidden>
+                Select Model
+            </option>
+            <option value="34901A">34901A</option>
+            <option value="34902A">34902A</option>
+            <option value="34908A">34908A</option>
+            <option value="34921A">34921A</option>
+            <option value="DAQM900A">DAQM900A</option>
+            <option value="DAQM901A">DAQM901A</option>
+            <option value="DAQM902A">DAQM902A</option>
+        </select>
+    </div>
+
+    <!-- UUT Serial Input -->
+    <label class="col-form-label form-input-label" for="daq-uut-serial">UUT Serial</label>
+    <div class="col">
+        <input class="form-input-field text-center" id="daq-uut-serial" type="text" oninput="this.value = this.value.toUpperCase()"
+               placeholder="Type in ID first">
+    </div>
+</div>
+
+<br/>
+<br/>
+
+<!-- Channel Choices -->
+<div class="row align-items-center" style="width: 100%; margin-left: 3%; margin-top: 10px;">
+    <!-- Type E Dropdown -->
+    <label class="col-form-label form-input-label"  for="daq-type-e-channel">Type E Channel</label>
+    <!-- 34970 / DAQ970 -->
+    <div class="col" id="daq-type-e-channel-col">
+        <select class="form-dropdown text-center" id="daq-type-e-channel" style="width: 70%">
+            <option value="201" selected>201</option>
+            <option value="202">202</option>
+            <option value="203">203</option>
+            <option value="204">204</option>
+            <option value="205">205</option>
+            <option value="206">206</option>
+            <option value="207">207</option>
+            <option value="208">208</option>
+            <option value="209">209</option>
+            <option value="210">210</option>
+            <option value="211">211</option>
+            <option value="212">212</option>
+            <option value="213">213</option>
+            <option value="214">214</option>
+            <option value="215">215</option>
+            <option value="216">216</option>
+            <option value="217">217</option>
+            <option value="218">218</option>
+            <option value="219">219</option>
+            <option value="220">220</option>
+        </select>
+    </div>
+    <!-- 34980 -->
+    <div class="col error-hide" id="daq-type-e-channel-double-col">
+        <select class="form-dropdown text-center error-hide" id="daq-type-e-channel-double" style="width: 70%">
+            <option value="2001" selected>2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+        </select>
+    </div>
+
+    <!-- Type J Dropdown -->
+    <label class="col-form-label form-input-label" for="daq-type-j-channel">Type J Channel</label>
+    <!-- 34970 / DAQ970 -->
+    <div class="col" id="daq-type-j-channel-col">
+        <select class="form-dropdown text-center" id="daq-type-j-channel" style="width: 70%">
+            <option value="201">201</option>
+            <option value="202">202</option>
+            <option value="203">203</option>
+            <option value="204">204</option>
+            <option value="205">205</option>
+            <option value="206" selected>206</option>
+            <option value="207">207</option>
+            <option value="208">208</option>
+            <option value="209">209</option>
+            <option value="210">210</option>
+            <option value="211">211</option>
+            <option value="212">212</option>
+            <option value="213">213</option>
+            <option value="214">214</option>
+            <option value="215">215</option>
+            <option value="216">216</option>
+            <option value="217">217</option>
+            <option value="218">218</option>
+            <option value="219">219</option>
+            <option value="220">220</option>
+        </select>
+    </div>
+    <!-- 34980 -->
+    <div class="col error-hide" id="daq-type-j-channel-double-col">
+        <select class="form-dropdown text-center error-hide" id="daq-type-j-channel-double" style="width: 70%">
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006" selected>2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+        </select>
+    </div>
+
+    <!-- Type K Dropdown -->
+    <label class="col-form-label form-input-label" for="daq-type-k-channel">Type K Channel</label>
+    <!-- 34970 / DAQ970 -->
+    <div class="col" id="daq-type-k-channel-col">
+        <select class="form-dropdown text-center" id="daq-type-k-channel" style="width: 70%">
+            <option value="201">201</option>
+            <option value="202">202</option>
+            <option value="203">203</option>
+            <option value="204">204</option>
+            <option value="205">205</option>
+            <option value="206">206</option>
+            <option value="207">207</option>
+            <option value="208">208</option>
+            <option value="209">209</option>
+            <option value="210">210</option>
+            <option value="211" selected>211</option>
+            <option value="212">212</option>
+            <option value="213">213</option>
+            <option value="214">214</option>
+            <option value="215">215</option>
+            <option value="216">216</option>
+            <option value="217">217</option>
+            <option value="218">218</option>
+            <option value="219">219</option>
+            <option value="220">220</option>
+        </select>
+    </div>
+    <!-- 34980 -->
+    <div class="col error-hide" id="daq-type-k-channel-double-col">
+        <select class="form-dropdown text-center" id="daq-type-k-channel-double" style="width: 70%">
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011" selected>2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017">2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+        </select>
+    </div>
+
+    <!-- Type T Dropdown -->
+    <label class="col-form-label form-input-label" for="daq-type-t-channel">Type T Channel</label>
+    <!-- 34970 / DAQ970 -->
+    <div class="col" id="daq-type-t-channel-col">
+        <select class="form-dropdown text-center" id="daq-type-t-channel" style="width: 70%">
+            <option value="201">201</option>
+            <option value="202">202</option>
+            <option value="203">203</option>
+            <option value="204">204</option>
+            <option value="205">205</option>
+            <option value="206">206</option>
+            <option value="207">207</option>
+            <option value="208">208</option>
+            <option value="209">209</option>
+            <option value="210">210</option>
+            <option value="211">211</option>
+            <option value="212">212</option>
+            <option value="213">213</option>
+            <option value="214">214</option>
+            <option value="215">215</option>
+            <option value="216">216</option>
+            <option value="217" selected>217</option>
+            <option value="218">218</option>
+            <option value="219">219</option>
+            <option value="220">220</option>
+        </select>
+    </div>
+    <!-- 34980 -->
+    <div class="col error-hide" id="daq-type-t-channel-double-col">
+        <select class="form-dropdown text-center" id="daq-type-t-channel-double" style="width: 70%">
+            <option value="2001">2001</option>
+            <option value="2002">2002</option>
+            <option value="2003">2003</option>
+            <option value="2004">2004</option>
+            <option value="2005">2005</option>
+            <option value="2006">2006</option>
+            <option value="2007">2007</option>
+            <option value="2008">2008</option>
+            <option value="2009">2009</option>
+            <option value="2010">2010</option>
+            <option value="2011">2011</option>
+            <option value="2012">2012</option>
+            <option value="2013">2013</option>
+            <option value="2014">2014</option>
+            <option value="2015">2015</option>
+            <option value="2016">2016</option>
+            <option value="2017" selected>2017</option>
+            <option value="2018">2018</option>
+            <option value="2019">2019</option>
+            <option value="2020">2020</option>
+        </select>
+    </div>
+</div>
+
+<br/>
+<br/>
+
+
+<!-- UUT Notes Text Area -->
+<div class="row align-items-center" style="width: 100%; margin-left: 3%; margin-top: 10px;">
+<!--    <label class="col-form-label form-input-label"  for="daq-uut-notes">Notes</label>-->
+        <textarea class="form-input-field" style="width: 95%; height: 45px;" id="daq-uut-notes" type="text"
+                  placeholder="Notes"></textarea>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<!-- Test Information Section Header -->
+<div class="row align-items-center">
+    <div class="label-container">
+        <div class="left-border"></div>
+        <div class="top-border"><h4>Test Information</h4></div>
+        <div class="bottom-border"></div>
+    </div>
+</div>
+
+<br/>
+
+<div class="row align-items-center" style="width: 100%; margin-left: 3%; margin-top: 10px;">
+    <!-- Temperature Information Input -->
+    <label class="col-form-label form-input-label"  for="daq-temperature">Temp (°C)</label>
+    <div class="col">
+        <input class="form-input-field text-center" id="daq-temperature" type="text" placeholder="e.g. 27.1" tabindex="-1" style="width: 50%">
+    </div>
+
+    <!-- Humidity Information Input -->
+    <label class="col-form-label form-input-label"  for="daq-humidity">Humidity (%RH)</label>
+    <div class="col">
+        <input class="form-input-field text-center" id="daq-humidity" type="text" placeholder="e.g. 42.3" tabindex="-1" style="width: 50%">
+    </div>
+
+    <!-- Settle Time Input -->
+    <label class="col-form-label form-input-label"  for="daq-settle-time">Temp. Settle Time (mins)</label>
+    <div class="col">
+        <input class="form-input-field text-center" id="daq-settle-time" type="text" style="width: 50%">
+    </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<!-- Pagination buttons -->
+<nav aria-label="..." class="position-absolute" style="bottom: 120px; left: 0; right: 0;">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" aria-label="Previous" id="daq-setup-previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        <li class="page-item"><a class="page-link" id="daq-setup-instruments">Instruments</a></li>
+        <li class="page-item active"><a class="page-link" href="#" id="daq-setup-setup">Setup</a></li>
+        <li class="page-item"><a class="page-link" id="daq-setup-tests">Tests</a></li>
+        <li class="page-item">
+            <a class="page-link" aria-label="Next" id="daq-setup-next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a>
+        </li>
+    </ul>
+</nav>
+{% endblock %}
+
+
+<!-- Page JS Files -->
+{% block page_js_include %}
+<script src="../../js/daq/Daq_Setup.js"></script>
+{% endblock %}

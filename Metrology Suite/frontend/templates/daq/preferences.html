@@ -1,0 +1,20 @@
+<!-- Base Extension -->
+{% extends 'daq/daq_base.html' %}
+
+
+<!-- Page Label -->
+{% block page_label %}
+    User Preferences
+{% endblock %}
+
+
+<!-- Main Content -->
+{% block page_content %}
+    {% include 'globals/user_preferences.html' %}
+{% endblock %}
+
+
+<!-- Page JS Files -->
+{% block page_js_include %}
+    <script src="../../js/globals/User_Preferences.js"></script>
+{% endblock %}

@@ -1,0 +1,108 @@
+<!-- Base Extension -->
+{% extends 'daq/daq_base.html' %}
+
+
+<!-- Page Label -->
+{% block page_label %}
+    Tutorial
+{% endblock %}
+
+
+<!-- Main Content -->
+{% block page_content %}
+<br/>
+<div class="row align-items-center">
+    <div class="col">
+        <p>
+            1.  Turn on the Ectron and DAW mainframe to allow 1 hour warmup, if not already done so.
+            <br/>
+            <br/>
+            2.  Connect the appropriate thermocouples into their respective channels, unless otherwise noted by a Limit sticker.
+                Then insert the module into Slot 200.
+        </p>
+        <div class="row" style="margin-bottom: 0;padding-top: 0">
+            <div class="col-3"></div>
+            <div class="col-4">
+                20+ Channel Modules
+            </div>
+            <div class="col-3">
+                16 Channel Modules
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 0;padding-top: 0">
+            <div class="col-1"></div>
+            <div class="col-3">
+                Type E
+            </div>
+            <div class="col-4">
+                CH01
+            </div>
+            <div class="col-3">
+                CH01
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 0;padding-top: 0">
+            <div class="col-1"></div>
+            <div class="col-3">
+                Type J
+            </div>
+            <div class="col-4">
+                CH06
+            </div>
+            <div class="col-3">
+                CH06
+            </div>
+        </div>
+        <div class="row" style="margin-bottom: 0;padding-top: 0">
+            <div class="col-1"></div>
+            <div class="col-3">
+                Type K
+            </div>
+            <div class="col-4">
+                CH11
+            </div>
+            <div class="col-3">
+                CH11
+            </div>
+        </div>
+        <div class="row" style="padding-top: 0">
+            <div class="col-1"></div>
+            <div class="col-3">
+                Type T
+            </div>
+            <div class="col-4">
+                CH17
+            </div>
+            <div class="col-3">
+                CH16
+            </div>
+        </div>
+        <br/>
+        <br/>
+        <p>
+            3.  If adjustments are needed, follow the steps on SL0881 then repeat tests.
+        </p>
+    </div>
+    <div class="col index-pic">
+        <img alt="daq_example" src="../../images/daq/34901tut.png"/>
+    </div>
+</div>
+
+<br/>
+<br/>
+
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col">
+        <button class="btn-main primary-bg" onclick="location.href = '../daq/instruments.html';">I Got This!</button>
+    </div>
+    <div class="col"></div>
+</div>
+{% endblock %}
+
+{% block page_js_include %}
+<script src="../../js/daq/Daq_Tutorial.js"></script>
+{% endblock %}
+
+{% block page_script %}
+{% endblock %}

@@ -1,0 +1,122 @@
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block meta %}{% endblock %}
+
+    <!-- CSS Includes -->
+    <link href="../../lib/bootstrap-4.4.1/css/bootstrap.css" rel="stylesheet" />
+    <link href="../../lib/fontawesome-pro-5.7.1/css/fontawesome.css" rel="stylesheet" />
+    <link href="../../lib/fontawesome-pro-5.7.1/css/solid.css" rel="stylesheet" />
+    <link href="../../css/global.css" rel="stylesheet" />
+    <link href="../../css/elements.css" rel="stylesheet" />
+    <link rel="icon" href="../../images/globals/logo_icon.png" type="image/x-icon"/>
+    {% block app_css_include %}{% endblock %}
+    {% block page_css_include %}{% endblock %}
+
+</head>
+
+<body class="up-body mw-100 position-relative">
+
+{% block before_header %}{% endblock %}
+
+<header class="up-header">
+
+    {% block navbar_fixed %}
+        <nav class="navbar navbar-expand-md navbar-dark py-0 px-3" id="jpl-navbar">
+            <a class="navbar-brand d-flex align-items-center" target="_blank" href="http://jpl.nasa.gov" tabindex="-1">
+                <img src="../../images/globals/jpl_logo-236x70.png" title="JPL" alt="JPL"/>
+            </a>
+            <div class="navbar-user ml-auto mr-3">
+                {% block navbar_user %}{% endblock %}
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#jpl-navbar-links" aria-controls="jpl-navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="far fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="jpl-navbar-links">
+                <ul class="navbar-nav mr-auto">
+                    {% block navbar_links %}
+                        <li class="nav-item position-relative">
+                            <a class="nav-link px-md-3" target="_blank" href="http://js.jpl.nasa.gov" tabindex="-1">JPL Space</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link px-md-3" target="_blank" href="http://jpl.nasa.gov" tabindex="-1">JPL</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link px-md-3" target="_blank" href="http://www.caltech.edu" tabindex="-1">Caltech</a>
+                        </li>
+                        <li class="nav-item position-relative">
+                            <a class="nav-link px-md-3" target="_blank" href="http://www.nasa.gov" tabindex="-1">NASA</a>
+                        </li>
+                    {% endblock %}
+                </ul>
+                <ul class="navbar-nav">
+                    {% block logged_in %}{% endblock %}
+                </ul>
+            </div>
+        </nav>
+    {% endblock %}
+
+    <div class="container-fluid">
+        <div class="d-flex flex-column flex-md-row justify-content-center justify-content-md-between" id="jpl-titlebar">
+            <div class="my-3 my-md-4 d-flex align-items-center align-content-center overflow-hidden" id="jpl-titlebar-text">
+                <h1 class="text-nowrap app-title">{% block app_label %}{% endblock %}</h1>
+                <h5 class="text-truncate software-title">{% block software_label %}{% endblock %}</h5>
+                <h2 class="text-truncate">{% block page_label %}{% endblock %}</h2>
+            </div>
+        </div>
+    </div>
+
+    <hr class="my-0" />
+
+    <div class="container-fluid position-relative" id="app-navbar">
+        <div class="ml-3" id="app-navbar-actions">
+            {% block action_block %}{% endblock %}
+        </div>
+        <div class="" id="app-navbar-links">
+            {% block app_navbar %}{% endblock %}
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+</header>
+
+{% block hero_content %}{% endblock %}
+
+<div class="container-fluid main-content mb-5 mt-4 pt-2">{% block page_content %}{% endblock %}</div>
+
+<footer class="up-footer">
+    {% block footer %}{% endblock %}
+</footer>
+
+{% block after_footer %}{% endblock %}
+
+<!-- JS Includes -->
+<script src="../../lib/jQuery-3.4.1/js/jquery-3.4.1.min.js"></script>
+<script src="../../lib/popper-1.16.0/js/popper.min.js"></script>
+<script src="../../lib/bootstrap-4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="../../js/globals/Navbar.js"></script>
+<script src="../../js/globals/Footer.js"></script>
+<script type="text/javascript" src="/eel.js"></script>
+{% block app_window_size %}{% endblock %}
+<script type="text/javascript">{% block page_script %}{% endblock %}</script>
+
+<!--suppress ObjectAllocationIgnored -->
+<script>
+    new Navbar(document.querySelector('div#app-navbar-links > ul'));
+    new Footer(document.querySelector('footer'));
+</script>
+
+<link rel="stylesheet" href="../../css/app_specifics.css">
+<link rel="stylesheet" href="../../css/navbar.css">
+{% block app_js_include %}{% endblock %}
+{% block page_js_include %}{% endblock %}
+
+<div id="dynamic_js_include">{% block dynamic_js_include %}{% endblock %}</div>
+
+</body>
+{% block html_after %}{% endblock %}
+</html>

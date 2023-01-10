@@ -1,0 +1,373 @@
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-10">
+        <div class="label-container">
+            <div class="left-border"></div>
+            <div class="top-border"><h5>User Information</h5></div>
+            <div class="bottom-border"></div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+<br/>
+
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col">
+        <label for="lab">Lab (Building-Room)</label>
+        <select class="form-dropdown text-center" id="lab">
+            <option value="0" hidden disabled selected>--</option>
+            <option value="20">122 - B01</option>
+            <option value="22">125 - B42</option>
+            <option value="24">125 - B64</option>
+            <option value="25">125 - B66</option>
+            <option value="26">125 - B67</option>
+            <option value="27">125 - B68</option>
+            <option value="28">125 - B72</option>
+            <option value="30">170 - 120</option>
+            <option value="69">229 - 100</option>
+        </select>
+    </div>
+    <div class="col-1"></div>
+    <div class="col">
+        <label class="form-input-label" for="initials">Initials</label>
+        <input class="form-input-field text-center" id="initials" style="width: 99%" type="text"
+               oninput="this.value = this.value.toUpperCase()">
+    </div>
+    <div class="col-1"></div>
+    <div class="col">
+        <label for="window-size">Window Size</label>
+        <select class="form-dropdown text-center" id="window-size" onchange="window_size_change()">
+            <option value="1080">1920 x 1080</option>
+            <option value="900">1600 x 900</option>
+            <option value="720">1280 x 720</option>
+        </select>
+    </div>
+    <div class="col-2"></div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-10">
+        <div class="label-container">
+            <div class="left-border"></div>
+            <div class="top-border"><h5>Bench Information</h5></div>
+            <div class="bottom-border"></div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+<br/>
+
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-3 text-center">
+        <h6><label for="std-count">Number of Standards connected to PC</label></h6>
+        <select class="form-dropdown text-center" id="std-count" style="width: 65%; text-align-last: center">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4" selected>4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+    </div>
+    <div class="col"></div>
+</div>
+
+<br/>
+
+<div class="row align-items-center" id="std1">
+    <div class="col-2"></div>
+    <div class="col">
+        <label for="std1-id">Standard ID</label>
+        <input class="form-input-field text-center" id="std1-id" style="width: 99%" type="text"
+               oninput="this.value = this.value.toUpperCase()"></div>
+    <div class="col">
+        <label for="std1-manu">Manufacturer</label>
+        <input class="form-input-field text-center" id="std1-manu" style="width: 99%" type="text"
+               oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"></div>
+    <div class="col">
+        <label for="std1-model">Model Number</label>
+        <input class="form-input-field text-center" id="std1-model" style="width: 99%" type="text"
+               oninput="this.value = this.value.toUpperCase()"></div>
+    <div class="col">
+        <label for="std1-interval">Calibration Interval</label>
+        <select class="form-dropdown text-center" id="std1-interval" style="width: 99%" type="text">
+            <option value="year" selected>1 Year</option>
+            <option value="month">6 Months</option>
+            <option value="day">90 Days</option>
+        </select></div>
+    <div class="col-2"></div>
+</div>
+
+<div id="std2">
+    <br/>
+    <div class="row align-items-center">
+        <div class="col-2"></div>
+        <div class="col">
+            <label for="std2-id">Standard ID</label>
+            <input class="form-input-field text-center" id="std2-id" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std2-manu">Manufacturer</label>
+            <input class="form-input-field text-center" id="std2-manu" style="width: 99%" type="text"
+                   oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"></div>
+        <div class="col">
+            <label for="std2-model">Model Number</label>
+            <input class="form-input-field text-center" id="std2-model" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std2-interval">Calibration Interval</label>
+            <select class="form-dropdown text-center" id="std2-interval" style="width: 99%" type="text">
+                <option value="year" selected>1 Year</option>
+                <option value="month">6 Months</option>
+                <option value="day">90 Days</option>
+            </select></div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+<div id="std3">
+    <br/>
+    <div class="row align-items-center">
+        <div class="col-2"></div>
+        <div class="col">
+            <label for="std3-id">Standard ID</label>
+            <input class="form-input-field text-center" id="std3-id" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std3-manu">Manufacturer</label>
+            <input class="form-input-field text-center" id="std3-manu" style="width: 99%" type="text"
+                   oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"></div>
+        <div class="col">
+            <label for="std3-model">Model Number</label>
+            <input class="form-input-field text-center" id="std3-model" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std3-interval">Calibration Interval</label>
+            <select class="form-dropdown text-center" id="std3-interval" style="width: 99%" type="text">
+                <option value="year" selected>1 Year</option>
+                <option value="month">6 Months</option>
+                <option value="day">90 Days</option>
+            </select></div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+<div id="std4">
+    <br/>
+    <div class="row align-items-center">
+        <div class="col-2"></div>
+        <div class="col">
+            <label for="std4-id">Standard ID</label>
+            <input class="form-input-field text-center" id="std4-id" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std4-manu">Manufacturer</label>
+            <input class="form-input-field text-center" id="std4-manu" style="width: 99%" type="text"
+                   oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"></div>
+        <div class="col">
+            <label for="std4-model">Model Number</label>
+            <input class="form-input-field text-center" id="std4-model" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std4-interval">Calibration Interval</label>
+            <select class="form-dropdown text-center" id="std4-interval" style="width: 99%" type="text">
+                <option value="year" selected>1 Year</option>
+                <option value="month">6 Months</option>
+                <option value="day">90 Days</option>
+            </select></div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+<div id="std5" class="error-hide">
+    <br/>
+    <div class="row align-items-center">
+        <div class="col-2"></div>
+        <div class="col">
+            <label for="std5-id">Standard ID</label>
+            <input class="form-input-field text-center" id="std5-id" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std5-manu">Manufacturer</label>
+            <input class="form-input-field text-center" id="std5-manu" style="width: 99%" type="text"
+                   oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"></div>
+        <div class="col">
+            <label for="std5-model">Model Number</label>
+            <input class="form-input-field text-center" id="std5-model" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std5-interval">Calibration Interval</label>
+            <select class="form-dropdown text-center" id="std5-interval" style="width: 99%" type="text">
+                <option value="year" selected>1 Year</option>
+                <option value="month">6 Months</option>
+                <option value="day">90 Days</option>
+            </select></div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+<div id="std6" class="error-hide">
+    <br/>
+    <div class="row align-items-center">
+        <div class="col-2"></div>
+        <div class="col">
+            <label for="std6-id">Standard ID</label>
+            <input class="form-input-field text-center" id="std6-id" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std6-manu">Manufacturer</label>
+            <input class="form-input-field text-center" id="std6-manu" style="width: 99%" type="text"
+                   oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"></div>
+        <div class="col">
+            <label for="std6-model">Model Number</label>
+            <input class="form-input-field text-center" id="std6-model" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std6-interval">Calibration Interval</label>
+            <select class="form-dropdown text-center" id="std6-interval" style="width: 99%" type="text">
+                <option value="year" selected>1 Year</option>
+                <option value="month">6 Months</option>
+                <option value="day">90 Days</option>
+            </select></div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+<div id="std7" class="error-hide">
+    <br/>
+    <div class="row align-items-center">
+        <div class="col-2"></div>
+        <div class="col">
+            <label for="std7-id">Standard ID</label>
+            <input class="form-input-field text-center" id="std7-id" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std7-manu">Manufacturer</label>
+            <input class="form-input-field text-center" id="std7-manu" style="width: 99%" type="text"
+                   oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"></div>
+        <div class="col">
+            <label for="std7-model">Model Number</label>
+            <input class="form-input-field text-center" id="std7-model" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std7-interval">Calibration Interval</label>
+            <select class="form-dropdown text-center" id="std7-interval" style="width: 99%" type="text">
+                <option value="year" selected>1 Year</option>
+                <option value="month">6 Months</option>
+                <option value="day">90 Days</option>
+            </select></div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+<div id="std8" class="error-hide">
+    <br/>
+    <div class="row align-items-center">
+        <div class="col-2"></div>
+        <div class="col">
+            <label for="std8-id">Standard ID</label>
+            <input class="form-input-field text-center" id="std8-id" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std8-manu">Manufacturer</label>
+            <input class="form-input-field text-center" id="std8-manu" style="width: 99%" type="text"
+                   oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"></div>
+        <div class="col">
+            <label for="std8-model">Model Number</label>
+            <input class="form-input-field text-center" id="std8-model" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std8-interval">Calibration Interval</label>
+            <select class="form-dropdown text-center" id="std8-interval" style="width: 99%" type="text">
+                <option value="year" selected>1 Year</option>
+                <option value="month">6 Months</option>
+                <option value="day">90 Days</option>
+            </select></div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+<div id="std9" class="error-hide">
+    <br/>
+    <div class="row align-items-center">
+        <div class="col-2"></div>
+        <div class="col">
+            <label for="std9-id">Standard ID</label>
+            <input class="form-input-field text-center" id="std9-id" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std9-manu">Manufacturer</label>
+            <input class="form-input-field text-center" id="std9-manu" style="width: 99%" type="text"
+                   oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"></div>
+        <div class="col">
+            <label for="std9-model">Model Number</label>
+            <input class="form-input-field text-center" id="std9-model" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std9-interval">Calibration Interval</label>
+            <select class="form-dropdown text-center" id="std9-interval" style="width: 99%" type="text">
+                <option value="year" selected>1 Year</option>
+                <option value="month">6 Months</option>
+                <option value="day">90 Days</option>
+            </select></div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+<div id="std10" class="error-hide">
+    <br/>
+    <div class="row align-items-center">
+        <div class="col-2"></div>
+        <div class="col">
+            <label for="std10-id">Standard ID</label>
+            <input class="form-input-field text-center" id="std10-id" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std10-manu">Manufacturer</label>
+            <input class="form-input-field text-center" id="std10-manu" style="width: 99%" type="text"
+                   oninput="this.value = this.value.charAt(0).toUpperCase() + this.value.slice(1)"></div>
+        <div class="col">
+            <label for="std10-model">Model Number</label>
+            <input class="form-input-field text-center" id="std10-model" style="width: 99%" type="text"
+                   oninput="this.value = this.value.toUpperCase()"></div>
+        <div class="col">
+            <label for="std10-interval">Calibration Interval</label>
+            <select class="form-dropdown text-center" id="std10-interval" style="width: 99%" type="text">
+                <option value="year" selected>1 Year</option>
+                <option value="month">6 Months</option>
+                <option value="day">90 Days</option>
+            </select></div>
+        <div class="col-2"></div>
+    </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<div class="row">
+    <div class="col"></div>
+    <div class="col">
+        <div class="form-footer">
+            <div class="form-buttons">
+                <button class="form-btn-exit" type="button" onclick="history.back()">Cancel</button>
+                <button class="form-btn-submit primary-bg" type="button" onclick="save_settings()">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-2"></div>
+</div>

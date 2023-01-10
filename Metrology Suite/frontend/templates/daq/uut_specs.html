@@ -1,0 +1,156 @@
+<!-- Base Extension -->
+{% extends 'daq/daq_base.html' %}
+
+
+<!-- Page Label -->
+{% block page_label %}
+    UUT Specifications
+{% endblock %}
+
+
+<!-- Main Content -->
+{% block page_content %}
+<!-- Select Model dropdown -->
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col text-center">
+        <h5><label for="daq-uut-model-dropdown">Select UUT Model Mainframe:</label></h5>
+    </div>
+    <div class="col"></div>
+</div>
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col text-center">
+        <select class="form-dropdown text-center" id="daq-uut-model-dropdown" style="width: 50%; text-align-last: center">
+            <option value="0" hidden disabled selected>--------</option>
+            <option value="34970A">3497*A / 34980A</option>
+            <option value="DAQ970A">DAQ97*A</option>
+        </select>
+    </div>
+    <div class="col"></div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<!-- Type E and J headers -->
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-4">
+        <div class="label-container">
+            <div class="left-border"></div>
+            <div class="top-border"><h4>Type E</h4></div>
+            <div class="bottom-border"></div>
+        </div>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-4">
+        <div class="label-container">
+            <div class="left-border"></div>
+            <div class="top-border"><h4>Type J</h4></div>
+            <div class="bottom-border"></div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+<br/>
+
+<!-- Type E and J Ranges -->
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-2 text-center">
+        <label class="form-input-label" for="daq-uut-type-e-low">-200°C to -150°C:</label>
+        <input class="form-input-field text-center" id="daq-uut-type-e-low" style="width: 80%" type="text">
+    </div>
+    <div class="col-2 text-center">
+        <label class="form-input-label" for="daq-uut-type-e-high">-150°C to 1000°C:</label>
+        <input class="form-input-field text-center" id="daq-uut-type-e-high" style="width: 80%" type="text">
+    </div>
+    <div class="col-1"></div>
+    <div class="col-2 text-center">
+        <label class="form-input-label" for="daq-uut-type-j-low">-210°C to -150°C:</label>
+        <input class="form-input-field text-center" id="daq-uut-type-j-low" style="width: 80%" type="text">
+    </div>
+    <div class="col-2 text-center">
+        <label class="form-input-label" for="daq-uut-type-j-high">-150°C to 1200°C:</label>
+        <input class="form-input-field text-center" id="daq-uut-type-j-high" style="width: 80%" type="text">
+    </div>
+    <div class="col"></div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<!-- Type K and T headers -->
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-4">
+        <div class="label-container">
+            <div class="left-border"></div>
+            <div class="top-border"><h4>Type K</h4></div>
+            <div class="bottom-border"></div>
+        </div>
+    </div>
+    <div class="col-1"></div>
+    <div class="col-4">
+        <div class="label-container">
+            <div class="left-border"></div>
+            <div class="top-border"><h4>Type T</h4></div>
+            <div class="bottom-border"></div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+<br/>
+
+<!-- Type K and T Ranges -->
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col-2 text-center">
+        <label class="form-input-label" for="daq-uut-type-k-low">-200°C to -100°C:</label>
+        <input class="form-input-field text-center" id="daq-uut-type-k-low" style="width: 80%" type="text">
+    </div>
+    <div class="col-2 text-center">
+        <label class="form-input-label" for="daq-uut-type-k-high">-100°C to 1000°C:</label>
+        <input class="form-input-field text-center" id="daq-uut-type-k-high" style="width: 80%" type="text">
+    </div>
+    <div class="col-1"></div>
+    <div class="col-2 text-center">
+        <label class="form-input-label" for="daq-uut-type-t-low">-200°C to -100°C:</label>
+        <input class="form-input-field text-center" id="daq-uut-type-t-low" style="width: 80%" type="text">
+    </div>
+    <div class="col-2 text-center">
+        <label class="form-input-label" for="daq-uut-type-t-high">-100°C to 400°C:</label>
+        <input class="form-input-field text-center" id="daq-uut-type-t-high" style="width: 80%" type="text">
+    </div>
+    <div class="col"></div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<!-- Cancel and Save buttons -->
+<div class="row">
+    <div class="col-4"></div>
+    <div class="col">
+        <div class="form-footer">
+            <div class="form-buttons">
+                <button class="form-btn-exit" type="button" id="daq-uut-specs-cancel">Cancel</button>
+                <button class="form-btn-submit primary-bg" type="button" onclick="daq_save_uut_specs()">Save</button>
+            </div>
+        </div>
+    </div>
+    <div class="col-2 text-center"></div>
+</div>
+{% endblock %}
+
+
+<!-- Page JS Files -->
+{% block page_js_include %}
+    <script src="../../js/daq/Daq_UUT_Specs.js"></script>
+{% endblock %}

@@ -1,0 +1,178 @@
+<!-- Base Extension -->
+{% extends 'daq/daq_base.html' %}
+
+
+<!-- Page Label -->
+{% block page_label %}
+    Instruments
+{% endblock %}
+
+
+<!-- Main Content -->
+{% block page_content %}
+<!-- Modal to notify about disconnected Instruments -->
+<div class="modal fade" id="daq-rescan-modal" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Rescanning Instruments</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body text-center">
+                Looking for connected Instruments...
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Modal to notify about disconnected Instruments -->
+<div class="modal fade" id="daq-instruments-modal" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Instruments not Connected</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body text-center">
+                Proper Standards are not connect to the computer. <br/>
+                Please scan for instruments again.
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="form-btn-exit" data-dismiss="modal">Cancel</button>
+                <button type="button" class="form-btn-submit primary-bg" data-dismiss="modal" id="daq-instruments-modal-rescan">Rescan</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal to make sure user goes to correct page -->
+<div class="modal fade" id="daq-instruments-tests-modal" data-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 class="modal-title">Go to Setup Page</h4>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body text-center">
+                Please go to Setup page first.
+            </div>
+
+            <!-- Modal footer -->
+            <div class="modal-footer">
+                <button type="button" class="form-btn-submit primary-bg" data-dismiss="modal">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Section Headers -->
+<div class="row align-items-center">
+    <div class="col">
+        <div class="label-container">
+            <div class="left-border"></div>
+            <div class="top-border"><h4>Standard Equipment</h4></div>
+            <div class="bottom-border"></div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="label-container">
+            <div class="left-border"></div>
+            <div class="top-border"><h4>UUT Equipment</h4></div>
+            <div class="bottom-border"></div>
+        </div>
+    </div>
+</div>
+
+<br/>
+
+<!-- Instrument images -->
+<div class="row align-items-center">
+    <div class="col">
+        <img alt="Ectron" src="../../images/instruments/Ectron_1140A.png" class="img-fluid"/>
+    </div>
+    <div class="col">
+        <img alt="UUT" src="../../images/daq/34970A_front.png" class="img-fluid" id="daq-mainframe-img"/>
+    </div>
+</div>
+
+<!-- Instrument descriptions -->
+<div class="row align-items-center">
+    <div class="col text-center">
+        <label><b>Thermocouple Simulator</b></label>
+    </div>
+    <div class="col text-center">
+        <label><b><span id="daq-mainframe-model">34970A</span> with UUT Module</b></label>
+    </div>
+</div>
+
+<!-- Proof of connected instruments -->
+<div class="row align-items-center">
+    <div class="col text-center">
+        <label><span id="daq-ectron-info">Communication Error</span></label>
+    </div>
+    <div class="col text-center">
+        <label><span id="daq-card-info">Communication Error</span></label>
+    </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
+<!-- Rescan button -->
+<div class="row align-items-center">
+    <div class="col"></div>
+    <div class="col text-center">
+        <button class="btn-main primary-bg" id="daq-rescan">Rescan Instruments</button>
+    </div>
+    <div class="col"></div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+<!-- Pagination buttons -->
+<nav aria-label="..." class="position-absolute" style="bottom: 120px; left: 0; right: 0;">
+    <ul class="pagination justify-content-center">
+        <li class="page-item">
+            <a class="page-link" aria-label="Previous" id="daq-instruments-previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+            </a>
+        </li>
+        <li class="page-item active"><a class="page-link" href="#" id="daq-instruments-instruments">Instruments</a></li>
+        <li class="page-item"><a class="page-link" id="daq-instruments-setup">Setup</a></li>
+        <li class="page-item"><a class="page-link" id="daq-instruments-tests">Tests</a></li>
+        <li class="page-item">
+            <a class="page-link" aria-label="Next" id="daq-instruments-next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+            </a></li>
+    </ul>
+</nav>
+{% endblock %}
+
+
+<!-- Page JS Files -->
+{% block page_js_include %}
+<script src="../../js/globals/Scanning.js"></script>
+<script src="../../js/daq/Daq_Instruments.js"></script>
+{% endblock %}

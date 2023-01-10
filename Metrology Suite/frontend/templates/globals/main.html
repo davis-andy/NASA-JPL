@@ -1,0 +1,40 @@
+<!-- Base Extension -->
+{% extends 'globals/base.html' %}
+
+
+<!-- Page Label -->
+{% block page_label %}
+    Login
+{% endblock %}
+
+
+<!-- Home Link -->
+{% block home_link %}
+    <li><a href="main.html" title="Refresh Page"><span class="fas fa-home-lg-alt"></span></a></li>
+{% endblock %}
+
+
+<!-- Main Content -->
+{% block page_content %}
+<form autocomplete="off" onsubmit="validate(); return false;">
+    {% include 'globals/software_select.html' %}
+    <br/>
+    {% include 'globals/indy_login.html' %}
+    <div class="form-app">
+        <div class="form-footer">
+            <div class="form-buttons">
+                <button class="form-btn-exit-hidden" type="button" tabindex="-1">
+                    Exit</button>
+                <button class="form-btn-submit primary-bg" type="submit">
+                    Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
+
+
+<!-- Page JS -->
+{% block page_js_include %}
+    <script src="../../js/globals/Login.js"></script>
+{% endblock %}

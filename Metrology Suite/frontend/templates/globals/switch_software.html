@@ -1,0 +1,35 @@
+{% extends 'globals/base.html' %}
+
+{% block logged_in %}
+    <li class="nav-item">
+        <a class="nav-link px-md-3" href="main.html" title="Logout">Logout</a>
+    </li>
+{% endblock %}
+
+{% block page_label %}
+    Switch Software
+{% endblock %}
+
+{% block home_link %}
+    <li><a href="switch_software.html" title="Refresh Page"><span class="fas fa-home-lg-alt"></span></a></li>
+{% endblock %}
+
+{% block page_content %}
+<form autocomplete="off" onsubmit="no_indy(); return false;">
+    {% include 'globals/software_select.html' %}
+    <div class="form-app">
+        <div class="form-footer">
+            <div class="form-buttons">
+                <button class="form-btn-exit-hidden" type="button">
+                    Exit</button>
+                <button class="form-btn-submit primary-bg" type="submit">
+                    Submit</button>
+            </div>
+        </div>
+    </div>
+</form>
+{% endblock %}
+
+{% block page_js_include %}
+    <script src="../../js/globals/Login.js"></script>
+{% endblock %}
