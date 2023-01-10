@@ -1,0 +1,343 @@
+/* keep this file synced with identical file in django_up_tools */
+
+$jpl-light-red: #EE2737;
+$jpl-red: #BA0C2F;
+$jpl-dark-red: #410706;
+$jpl-light-gray: #F2F2F2;
+$jpl-cool-gray-1: #E6E6E6;
+$jpl-cool-gray-3: #C8C8C8;
+$jpl-cool-gray-6: #A5A5A5;
+$jpl-cool-gray-9: #76777B;
+$jpl-cool-gray-11: #5D5D60;
+$jpl-dark-gray-1: #434345;
+$jpl-dark-gray-2: #2A292A;
+
+$bs-alert-default-bg: #e6e6e6;
+$bs-alert-default-border: #cccccc;
+$bs-alert-default-color: #555555;
+$bs-alert-default-bg-dark: darken($bs-alert-default-bg, 10%);
+$bs-alert-default-border-dark: darken($bs-alert-default-border, 10%);
+$bs-alert-default-color-dark: darken($bs-alert-default-color, 15%);
+$bs-alert-default-bg-darker: darken($bs-alert-default-bg, 15%);
+$bs-alert-default-border-darker: darken($bs-alert-default-border, 15%);
+$bs-alert-default-color-darker: darken($bs-alert-default-color, 15%);
+$bs-alert-primary-bg: #cce5ff;
+$bs-alert-primary-border: #b8daff;
+$bs-alert-primary-color: #004085;
+$bs-alert-primary-bg-dark: darken($bs-alert-primary-bg, 10%);
+$bs-alert-primary-border-dark: darken($bs-alert-primary-border, 10%);
+$bs-alert-primary-color-dark: darken($bs-alert-primary-color, 10%);
+$bs-alert-primary-bg-darker: darken($bs-alert-primary-bg, 15%);
+$bs-alert-primary-border-darker: darken($bs-alert-primary-border, 15%);
+$bs-alert-primary-color-darker: darken($bs-alert-primary-color, 15%);
+$bs-alert-secondary-bg: #e2e3e5;
+$bs-alert-secondary-border: #d6d8db;
+$bs-alert-secondary-color: #383d41;
+$bs-alert-secondary-bg-dark: darken($bs-alert-secondary-bg, 10%);
+$bs-alert-secondary-border-dark: darken($bs-alert-secondary-border, 10%);
+$bs-alert-secondary-color-dark: darken($bs-alert-secondary-color, 10%);
+$bs-alert-secondary-bg-darker: darken($bs-alert-secondary-bg, 15%);
+$bs-alert-secondary-border-darker: darken($bs-alert-secondary-border, 15%);
+$bs-alert-secondary-color-darker: darken($bs-alert-secondary-color, 15%);
+$bs-alert-success-bg: #d4edda;
+$bs-alert-success-border: #c3e6cb;
+$bs-alert-success-color: #155724;
+$bs-alert-success-bg-dark: darken($bs-alert-success-bg, 10%);
+$bs-alert-success-border-dark: darken($bs-alert-success-border, 10%);
+$bs-alert-success-color-dark: darken($bs-alert-success-color, 10%);
+$bs-alert-success-bg-darker: darken($bs-alert-success-bg, 15%);
+$bs-alert-success-border-darker: darken($bs-alert-success-border, 15%);
+$bs-alert-success-color-darker: darken($bs-alert-success-color, 15%);
+$bs-alert-danger-bg: #f8d7da;
+$bs-alert-danger-border: #f5c6cb;
+$bs-alert-danger-color: #721c24;
+$bs-alert-danger-bg-dark: darken($bs-alert-danger-bg, 10%);
+$bs-alert-danger-border-dark: darken($bs-alert-danger-border, 10%);
+$bs-alert-danger-color-dark: darken($bs-alert-danger-color, 10%);
+$bs-alert-danger-bg-darker: darken($bs-alert-danger-bg, 15%);
+$bs-alert-danger-border-darker: darken($bs-alert-danger-border, 15%);
+$bs-alert-danger-color-darker: darken($bs-alert-danger-color, 15%);
+$bs-alert-warning-bg: #fff3cd;
+$bs-alert-warning-border: #ffeeba;
+$bs-alert-warning-color: #856404;
+$bs-alert-warning-bg-dark: darken($bs-alert-warning-bg, 10%);
+$bs-alert-warning-border-dark: darken($bs-alert-warning-border, 10%);
+$bs-alert-warning-color-dark: darken($bs-alert-warning-color, 10%);
+$bs-alert-warning-bg-darker: darken($bs-alert-warning-bg, 15%);
+$bs-alert-warning-border-darker: darken($bs-alert-warning-border, 15%);
+$bs-alert-warning-color-darker: darken($bs-alert-warning-color, 15%);
+$bs-alert-info-bg: #d1ecf1;
+$bs-alert-info-border: #bee5eb;
+$bs-alert-info-color: #0c5460;
+$bs-alert-info-bg-dark: darken($bs-alert-info-bg, 10%);
+$bs-alert-info-border-dark: darken($bs-alert-info-border, 10%);
+$bs-alert-info-color-dark: darken($bs-alert-info-color, 10%);
+$bs-alert-info-bg-darker: darken($bs-alert-info-bg, 15%);
+$bs-alert-info-border-darker: darken($bs-alert-info-border, 15%);
+$bs-alert-info-color-darker: darken($bs-alert-info-color, 15%);
+$bs-alert-light-bg: #fefefe;
+$bs-alert-light-border: #fdfdfe;
+$bs-alert-light-color: #818182;
+$bs-alert-light-bg-dark: darken($bs-alert-light-bg, 10%);
+$bs-alert-light-border-dark: darken($bs-alert-light-border, 10%);
+$bs-alert-light-color-dark: darken($bs-alert-light-color, 10%);
+$bs-alert-light-bg-darker: darken($bs-alert-light-bg, 15%);
+$bs-alert-light-border-darker: darken($bs-alert-light-border, 15%);
+$bs-alert-light-color-darker: darken($bs-alert-light-color, 15%);
+$bs-alert-dark-bg: #d6d8d9;
+$bs-alert-dark-border: #c6c8ca;
+$bs-alert-dark-color: #1b1e21;
+$bs-alert-dark-bg-dark: darken($bs-alert-dark-bg, 10%);
+$bs-alert-dark-border-dark: darken($bs-alert-dark-border, 10%);
+$bs-alert-dark-color-dark: darken($bs-alert-dark-color, 10%);
+$bs-alert-dark-bg-darker: darken($bs-alert-dark-bg, 15%);
+$bs-alert-dark-border-darker: darken($bs-alert-dark-border, 15%);
+$bs-alert-dark-color-darker: darken($bs-alert-dark-color, 15%);
+
+$bs-button-default-bg: #ffffff;
+$bs-button-default-border: #cccccc;
+$bs-button-default-hover-bg: #e6e6e6;
+$bs-button-default-hover-border: #adadad;
+$bs-button-default-active-bg: #adadad;
+$bs-button-default-active-border: #969696;
+$bs-button-primary-bg: #617998;
+$bs-button-primary-border: #617998;
+$bs-button-primary-hover-bg: #4f627b;
+$bs-button-primary-hover-border: #0062cc;
+$bs-button-primary-active-bg: #0062cc;
+$bs-button-primary-active-border: #005cbf;
+$bs-button-secondary-bg: #6c757d;
+$bs-button-secondary-border: #6c757d;
+$bs-button-secondary-hover-bg: #5a6268;
+$bs-button-secondary-hover-border: #545b62;
+$bs-button-secondary-active-bg: #545b62;
+$bs-button-secondary-active-border: #4e555b;
+$bs-button-success-bg: #00ad69;
+$bs-button-success-border: #00ad69;
+$bs-button-success-hover-bg: #218838;
+$bs-button-success-hover-border: #1e7e34;
+$bs-button-success-active-bg: #1e7e34;
+$bs-button-success-active-border: #1c7430;
+$bs-button-danger-bg: #ff321e;
+$bs-button-danger-border: #ff321e;
+$bs-button-danger-hover-bg: #c82333;
+$bs-button-danger-hover-border: #bd2130;
+$bs-button-danger-active-bg: #bd2130;
+$bs-button-danger-active-border: #b21f2d;
+$bs-button-warning-bg: #f2a900;
+$bs-button-warning-border: #f2a900;
+$bs-button-warning-color: #212529;
+$bs-button-warning-hover-bg: #e0a800;
+$bs-button-warning-hover-border: #d39e00;
+$bs-button-warning-hover-color: #212529;
+$bs-button-warning-active-bg: #d39e00;
+$bs-button-warning-active-border: #c69500;
+$bs-button-warning-active-color: #212529;
+$bs-button-info-bg: #489fdf;
+$bs-button-info-border: #489fdf;
+$bs-button-info-hover-bg: #138496;
+$bs-button-info-hover-border: #117a8b;
+$bs-button-info-active-bg: #117a8b;
+$bs-button-info-active-border: #10707f;
+$bs-button-light-bg: #f8f9fa;
+$bs-button-light-border: #f8f9fa;
+$bs-button-light-color: #212529;
+$bs-button-light-hover-bg: #e2e6ea;
+$bs-button-light-hover-border: #dae0e5;
+$bs-button-light-hover-color: #212529;
+$bs-button-light-active-bg: #dae0e5;
+$bs-button-light-active-border: #d3d9df;
+$bs-button-light-active-color: #212529;
+$bs-button-dark-bg: #343a40;
+$bs-button-dark-border: #343a40;
+$bs-button-dark-hover-bg: #23272b;
+$bs-button-dark-hover-border: #1d2124;
+$bs-button-dark-active-bg: #1d2124;
+$bs-button-dark-active-border: #171a1d;
+
+$bs-text-primary: #617998;
+$bs-text-secondary: #6c757d;
+$bs-text-success: #00ad69;
+$bs-text-danger: #ff321e;
+$bs-text-warning: #f2a900;
+$bs-text-info: #489fdf;
+$bs-text-light: #f8f9fa;
+$bs-text-dark: #343a40;
+$bs-text-body: #212529;
+$bs-text-muted: #6c757d;
+
+$bs-input-background-color: #FCFFDD;
+$bs-input-border-color: #CED4DA;
+$bs-input-color: #495057;
+$bs-input-focus-background-color: #FCFFDD;
+$bs-input-focus-border-color: #80bdff;
+$bs-input-focus-box-shadow: 0 0 0 0.2rem rgba(#617998, .25);
+
+$fv-input-success-focus-box-shadow: 0 0 0 0.2rem rgba(#67B168, .25);
+$fv-input-error-focus-box-shadow: 0 0 0 0.2rem rgba(#CE8483, .25);
+
+$percentage-green: #3c963e;
+$percentage-green-yellow: #789740;
+$percentage-yellow: #978640;
+
+$link-color: #337ab7;
+$link-hover-color: #23527c;
+$link-disabled-color: #76777B;
+$link-active-color: #5D5D60;
+$link-active-hover-color: #2A292A;
+
+$input-bg-color: #FCFFDD;
+
+$mark-bg-color: #FCF8E3;
+
+$font-roboto-condensed-bold: 'RobotoCondensed-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-roboto-condensed-regular: 'RobotoCondensed-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-roboto-condensed-light: 'RobotoCondensed-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-roboto-bold: 'Roboto-Bold', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-roboto-regular: 'Roboto-Regular', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-roboto-light: 'Roboto-Light', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-helvetica-neue: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-font-awesome: 'Font Awesome 5 Pro', monospace;
+$font-font-awesome-brands: 'Font Awesome 5 Brands', monospace;
+
+//noinspection ALL
+%break-anywhere-with-hyphen {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+%end-with-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+%anti-aliased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin absolute-position($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin animation($params...) {
+  $max: length($params);
+  $animations: '';
+  @for $i from 1 through $max {
+    $animations: #{$animations + nth($params, $i)};
+    @if $i < $max {
+      $animations: #{$animations + ", "};
+    }
+  }
+  -webkit-animation: $animations;
+  -moz-animation: $animations;
+  -o-animation: $animations;
+  animation: $animations;
+}
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @-moz-keyframes #{$animationName} {
+    @content;
+  }
+  @-o-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+@mixin spin($time) {
+  @include animation(spin $time infinite linear);
+}
+@mixin animation-fill-mode-forwards() {
+  -webkit-animation-fill-mode: forwards !important;
+  -moz-animation-fill-mode: forwards !important;
+  -o-animation-fill-mode: forwards !important;
+  animation-fill-mode: forwards !important;
+}
+@mixin appearance($params...) {
+  -webkit-appearance: $params;
+  -moz-appearance: $params;
+  -ms-appearance: $params;
+  -o-appearance: $params;
+  appearance: $params;
+}
+@mixin box-shadow($params...) {
+  -webkit-box-shadow: $params;
+  -moz-box-shadow: $params;
+  -o-box-shadow: $params;
+  box-shadow: $params;
+}
+@mixin moz-border-color($top, $right, $bottom, $left) {
+  -moz-border-top-colors: $top;
+  -moz-border-right-colors: $right;
+  -moz-border-bottom-colors: $bottom;
+  -moz-border-left-colors: $left;
+}
+@mixin transform($params...) {
+  -webkit-transform: $params;
+  -moz-transform: $params;
+  -ms-transform: $params;
+  -o-transform: $params;
+  transform: $params;
+}
+@mixin transition($args...) {
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  //noinspection CssUnknownProperty
+  -ms-transition: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+@mixin linearGradient($left, $right){
+  background: $left; /* Old browsers */
+  background: -moz-linear-gradient(left, $left 0%, $right 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right top, color-stop(0%, $left), color-stop(100%, $right)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left,  $left 0%, $right 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(left, $left 0%, $right 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(left, $left 0%, $right 100%); /* IE10+ */
+  background: linear-gradient(to right, $left 0%, $right 100%); /* W3C */
+}
+
+@font-face {
+  font-family: 'RobotoCondensed-Bold';
+  src: url('../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf');
+}
+@font-face {
+  font-family: 'RobotoCondensed-Regular';
+  src: url('../fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf');
+}
+@font-face {
+  font-family: 'RobotoCondensed-Light';
+  src: url('../fonts/Roboto_Condensed/RobotoCondensed-Light.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/Roboto/Roboto-Bold.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+@font-face {
+  font-family: 'Roboto-Light';
+  src: url('../fonts/Roboto/Roboto-Light.ttf');
+}

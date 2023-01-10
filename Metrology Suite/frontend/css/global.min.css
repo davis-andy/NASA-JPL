@@ -1,0 +1,8 @@
+@font-face{font-family:"RobotoCondensed-Bold";src:url("../fonts/Roboto_Condensed/RobotoCondensed-Bold.ttf")}
+@font-face{font-family:"RobotoCondensed-Regular";src:url("../fonts/Roboto_Condensed/RobotoCondensed-Regular.ttf")}
+@font-face{font-family:"RobotoCondensed-Light";src:url("../fonts/Roboto_Condensed/RobotoCondensed-Light.ttf")}
+@font-face{font-family:"Roboto-Bold";src:url("../fonts/Roboto/Roboto-Bold.ttf")}
+@font-face{font-family:"Roboto-Regular";src:url("../fonts/Roboto/Roboto-Regular.ttf")}
+@font-face{font-family:"Roboto-Light";src:url("../fonts/Roboto/Roboto-Light.ttf")}
+body.up-body{min-height:100%;overflow-x:hidden}  .container-fluid{max-width:1400px}
+@media(min-width:576px){.container-fluid{padding-right:30px;padding-left:30px}}  h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5{margin:0}  h1,.h1{color:#76777b;font-family:"Roboto-Light","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:3rem}  h2,.h2{color:#434345;font-family:"RobotoCondensed-Bold","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:2rem}  h3,.h3{color:#ba0c2f;font-family:"Roboto-Bold","Helvetica Neue",Helvetica,Arial,sans-serif;font-size:2rem}  hr{border-color:#c8c8c8}  .fa:before,.fad:before,.fal:before,.far:before,.fas:before{font-family:"Font Awesome 5 Pro",monospace !important}  .fab:before{font-family:"Font Awesome 5 Brands",monospace !important}  a{color:#337ab7}  a:hover{color:#23527c}  a:disabled,a:disabled:hover,a.disabled,a.disabled:hover{color:#76777b;cursor:default;pointer-events:none}  a:active,a.active{color:#5d5d60}  a:active:hover,a.active:hover{color:#2a292a}  *:disabled>a,*:disabled>a:hover,*.disabled>a,*.disabled>a:hover{color:#76777b;cursor:default;pointer-events:none}  *:active>a,*.active>a{color:#5d5d60}  *:active>a:hover,*.active>a:hover{color:#2a292a}

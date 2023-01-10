@@ -1,0 +1,108 @@
+@import "mixins";
+
+/* ------------------------------ */
+/* ------------ BODY ------------ */
+/* ------------------------------ */
+
+body.up-body {
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+.container-fluid {
+  max-width: 1400px;
+}
+
+@media (min-width: 576px) {
+  .container-fluid {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+/* ------------------------------ */
+/* ---------- HEADINGS ---------- */
+/* ------------------------------ */
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+  margin: 0;
+}
+
+h1, .h1 {
+  color: $jpl-cool-gray-9;
+  font-family: $font-roboto-light;
+  font-size: 3rem;
+}
+
+h2, .h2 {
+  color: $jpl-dark-gray-1;
+  font-family: $font-roboto-condensed-bold;
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  color: $jpl-red;
+  font-family: $font-roboto-bold;
+  font-size: 2rem;
+}
+
+hr {
+  border-color: $jpl-cool-gray-3;
+}
+
+.fa, .fad , .fal, .far, .fas {
+  &:before {
+    font-family: $font-font-awesome !important;
+  }
+}
+.fab {
+  &:before {
+    font-family: $font-font-awesome-brands !important;
+  }
+}
+
+/* ------------------------------ */
+/* ----------- LINKS ------------ */
+/* ------------------------------ */
+
+a {
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  &:disabled, &.disabled {
+    &, &:hover {
+      color: $link-disabled-color;
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  &:active, &.active {
+    color: $link-active-color;
+
+    &:hover {
+      color: $link-active-hover-color;
+    }
+  }
+}
+
+*:disabled, *.disabled {
+  > a, > a:hover {
+    color: $link-disabled-color;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+*:active, *.active {
+  > a {
+    color: $link-active-color;
+
+    &:hover {
+      color: $link-active-hover-color;
+    }
+  }
+}
