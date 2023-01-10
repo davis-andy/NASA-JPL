@@ -37,6 +37,24 @@ UUT (or Unit Under Test) and STD (or Standard) Specifications pages will change 
 ![Standards Page](imgs/std_specs.PNG)
 <br><br>
 
+Now back to the main program.  There are two options to begin a calibration: Tutorial/Setup or New Calibration. <br>
+Tutorial/Setup is made for users who have not calibrated the specific UUT before, whereas New Calibration will skip the Tutorial page. <br>
+The Tutorial Page has a button that allows you to go to the same page New Calibration directs too. <br><br>
+![Tutorial Page](imgs/tutorial.PNG)
+<br><br>
+
+Once you are ready for a new calibration, the first page you are directed to is the Instruments Page that shows you if you are properly connected the the Standards and UUT.  It will show "Communication Error" if not with an option to Rescan the connections, otherwise it will show the Manufacturer and Model Number.  If the instruments are not connected, then you are not able to proceed. <br><br>
+![Instruments Page](imgs/instrs_daq.PNG)
+<br><br>
+
+If you are able to proceed, you are then presented to the Setup Page (not the same as the Tutorial/Setup).  This one allows you to put in the relevent information for the Datasheet - UUT ID, UUT Model, UUT Serial, Temperature, Humidity - as well as options to communicate to the UUT with the correct settings. <br><br>
+![Setup Page](imgs/setup_daq.PNG)
+<br><br>
+
+If you are able to proceed, you are then presented to the Setup Page (not the same as the Tutorial/Setup).  This one allows you to put in the relevent information for the Datasheet - UUT ID, UUT Model, UUT Serial, Temperature, Humidity - as well as options to communicate to the UUT with the correct settings. <br><br>
+![Tests Page](imgs/tests_daq.PNG)
+<br><br>
+
 At the end of it all, if you decided to run a different sub program without closing the entire app, you have the choice to do so without needing to log in again. <br><br>
 ![Switch Page](imgs/switch_software.PNG)
 <br><br>
