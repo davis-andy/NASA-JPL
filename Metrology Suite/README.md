@@ -14,7 +14,7 @@ This program was designed to calibrate those with the reference junction: 34901A
 # Program Images
 
 Upon starting the program, you will be greeted with a custom Splash Screen that runs a few functions in the background while loading the main program, such as checking for updates and searching for connected instruments <br><br> 
-![Splash Screen](imgs/loading.png)
+![Splash Screen](imgs/loading.PNG)
 <br><br>
 
 Once the main program has finally loaded, the user will choose which sub program they want to run as well as needing to login with their IndySoft (JPL Metrology's asset tracking software) account. <br><br>
