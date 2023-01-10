@@ -4,7 +4,7 @@ Language Used:  Python, HTML, CSS, JavaScript/JQuery <br>
 IDE Used:  PyCharm <br>
 Published Using:  PyInstaller <br><br>
 
-\*\* All sub programs have the same basic layout, so the images will be a mixture from those that are more complete \*\*
+\*\* All sub programs have the same basic layout, so the images will be from those that are more complete \*\*
 
 ## Keysight Data Acquisition Unit - Temperature Modules
 
