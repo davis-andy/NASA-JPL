@@ -38,5 +38,5 @@ UUT (or Unit Under Test) and STD (or Standard) Specifications pages will change 
 <br><br>
 
 At the end of it all, if you decided to run a different sub program without closing the entire app, you have the choice to do so without needing to log in again. <br><br>
-![Switch Page](imgs/switch.PNG)
+![Switch Page](imgs/switch_software.PNG)
 <br><br>
