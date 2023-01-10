@@ -28,7 +28,7 @@ After logging in and choosing the sub program, the meat of the programs will pre
 A quick detour up to the menu bar, let's see what is under the "Settings" menu<br><br>
 
 The preferences page will be the same across the entire app, which holds general information such as user initials (for datasheets), lab room number (to get temperature/humidity data), and the preferred window size for the app.  Connected standards are a work in progress, so it may not be around. <br><br>
-![Preferences Page](imgs/preferences.PNG)
+![Preferences Page](imgs/user_preferences.PNG)
 <br><br>
 
 UUT (or Unit Under Test) and STD (or Standard) Specifications pages will change depending on the sub program that is running. <br><br>
