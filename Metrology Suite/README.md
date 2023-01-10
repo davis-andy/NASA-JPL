@@ -2,50 +2,14 @@
 
 Language Used:  Python, HTML, CSS, JavaScript/JQuery <br>
 IDE Used:  PyCharm <br>
-Published Using:  ? <br><br>
+Published Using:  PyInstaller <br><br>
 
 \*\* All sub programs have the same basic layout, so the images will be a mixture from those that are more complete \*\*
 
-## CryoLake - Updated (in progress)
-
-CryoLake is a program developed at JPL by a Metrology Intern dubbed for CryoCon and LakeShore Calibration Program. <br><br>
-This program was designed to calibrate temperature controllers/monitors manufactured by CryoCon and LakeShore. <br><br>
-Original program was written in C#. <br><br>
-
-## Keysight Data Acquisition Unit - Temperature Modules (in progress)
+## Keysight Data Acquisition Unit - Temperature Modules
 
 The Keysight Data Acquisition Unit has a multitude of modules that can be plugged into the back, but only a few have a reference junction (aka they can measure temperature). <br><br>
 This program was designed to calibrate those with the reference junction: 34901A, 34902A, 34908A, 34921A/T, DAQM900A, DAQM901A, DAQM902A. <br><br>
-
-Upon loading the program you are greeted with the main page showing the Title, Software ID (which is not assigned since I never officially published this program to the group), Version, Developers, and the two options to start the program. <br><br>
-
-## Decade Resistance Boxes (in progress)
-
-The Keysight Data Acquisition Unit has a multitude of modules that can be plugged into the back, but only a few have a reference junction (aka they can measure temperature). <br><br>
-This program was designed to calibrate those with the reference junction: 34901A, 34902A, 34908A, 34921A/T, DAQM900A, DAQM901A, DAQM902A. <br><br>
-
-Upon loading the program you are greeted with the main page showing the Title, Software ID (which is not assigned since I never officially published this program to the group), Version, Developers, and the two options to start the program. <br><br>
-
-## NoiseCal - Updated (?)
-
-NoiseCal is a program developed at JPL by a Metrology Engineer dubbed for Noise Source Calibration Program. <br><br>
-This program was designed to calibrate Keysight Noise Sources. <br><br>
-Original program was written in Python, but standalone using Kivy.  It may or may not be updated to be included within this Suite. <br><br>
-
-## Valhalla Power Meters (in progress)
-
-The Keysight Data Acquisition Unit has a multitude of modules that can be plugged into the back, but only a few have a reference junction (aka they can measure temperature). <br><br>
-This program was designed to calibrate those with the reference junction: 34901A, 34902A, 34908A, 34921A/T, DAQM900A, DAQM901A, DAQM902A. <br><br>
-
-Upon loading the program you are greeted with the main page showing the Title, Software ID (which is not assigned since I never officially published this program to the group), Version, Developers, and the two options to start the program. <br><br>
-
-## Yokogawa Data Acquistion Units (in progress)
-
-The Keysight Data Acquisition Unit has a multitude of modules that can be plugged into the back, but only a few have a reference junction (aka they can measure temperature). <br><br>
-This program was designed to calibrate those with the reference junction: 34901A, 34902A, 34908A, 34921A/T, DAQM900A, DAQM901A, DAQM902A. <br><br>
-
-Upon loading the program you are greeted with the main page showing the Title, Software ID (which is not assigned since I never officially published this program to the group), Version, Developers, and the two options to start the program. <br><br>
-<br><br>
 
 # Program Images
 
