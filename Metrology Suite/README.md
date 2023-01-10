@@ -26,8 +26,6 @@ After logging in and choosing the sub program, the meat of the programs will pre
 <br><br>
 
 A quick detour up to the menu bar, let's see what is under the "Settings" menu<br><br>
-![Settings Menu](imgs/settings.PNG)
-<br><br>
 
 The preferences page will be the same across the entire app, which holds general information such as user initials (for datasheets), lab room number (to get temperature/humidity data), and the preferred window size for the app.  Connected standards are a work in progress, so it may not be around. <br><br>
 ![Preferences Page](imgs/preferences.PNG)
