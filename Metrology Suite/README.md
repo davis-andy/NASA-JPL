@@ -32,7 +32,7 @@ The preferences page will be the same across the entire app, which holds general
 <br><br>
 
 UUT (or Unit Under Test) and STD (or Standard) Specifications pages will change depending on the sub program that is running. <br><br>
-![UUT Page](imgs/uut_specs.PNG)
+![UUT Page](imgs/uut_specs_daq.PNG)
 <br><br>
 ![Standards Page](imgs/std_specs.PNG)
 <br><br>
