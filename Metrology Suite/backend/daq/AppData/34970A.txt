@@ -1,0 +1,9 @@
+TypeELow,1.5
+TypeEHigh,1.0
+TypeJLow,1.2
+TypeJHigh,1.0
+TypeKLow,1.5
+TypeKHigh,1.0
+TypeTLow,1.5
+TypeTHigh,1.0
+Resolution,0.1
